@@ -42,6 +42,10 @@
 // console.log(typeof saySomething(123));
 
 console.log(x); // undefined
-var x = 5;
+let x = 5;
+let X = 10;
+
+console.log(x); // 5
+console.log(X); // 10
 
 
