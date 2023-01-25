@@ -2,7 +2,7 @@
 
 A regular expression, or "regex" for short, is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. It's like a search pattern to help you search for a certain text in a string.
 
-For example, if you wanted to find the word "cat" in the string "The cat in the hat", you could use the regular expression /cat/ to search for the word "cat".
+For example, if you wanted to find the word "cat" in the string "The cat in the hat", you could use the regular expression `/cat/` to search for the word `"cat"`.
 
 Here is an example of a simple regular expression in JavaScript:
 
