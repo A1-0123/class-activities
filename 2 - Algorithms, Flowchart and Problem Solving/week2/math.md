@@ -16,6 +16,8 @@ JavaScript has a built-in Math object that contains many useful mathematical fun
 Here are some examples of how you might use these methods:
 
 ```js
+Math.floor(Math.random() * 10) + 1 // will return 1 to 10 random numbers
+
 var x = 5.3;
 console.log(Math.round(x)); // Outputs 5
 console.log(Math.ceil(x)); // Outputs 6
