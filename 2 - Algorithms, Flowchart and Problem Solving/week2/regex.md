@@ -1,5 +1,65 @@
 ###### REGEX
 
+A regular expression, or "regex" for short, is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. It's like a search pattern to help you search for a certain text in a string.
+
+For example, if you wanted to find the word "cat" in the string "The cat in the hat", you could use the regular expression /cat/ to search for the word "cat".
+
+Here is an example of a simple regular expression in JavaScript:
+
+```js
+let string = "The cat in the hat";
+let pattern = /cat/;
+let result = string.match(pattern);
+console.log(result);
+```
+This will output "cat" in the console, because it found the word "cat" in the string "The cat in the hat".
+
+Finding a specific character:
+
+```js
+let string = "The cat in the hat";
+let pattern = /t/;
+let result = string.match(pattern);
+console.log(result);
+```
+This will output "t" in the console, because it found the first "t" in the string "The cat in the hat".
+
+Finding a specific word in a string:
+
+```js
+let string = "The cat in the hat";
+let pattern = /hat/;
+let result = string.match(pattern);
+console.log(result);
+```
+
+This will output "hat" in the console, because it found the word "hat" in the string "The cat in the hat".
+
+Finding a specific word that starts with a specific letter:
+
+
+```js
+let string = "The cat in the hat";
+let pattern = /[c]at/;
+let result = string.match(pattern);
+console.log(result);
+```
+
+This will output "cat" in the console, because it found the word "cat" in the string "The cat in the hat" that starts with letter 'c'.
+
+Finding a specific word that ends with a specific letter:
+
+```js
+let string = "The cat in the hat";
+let pattern = /at$/;
+let result = string.match(pattern);
+console.log(result);
+```
+
+This will output "hat" in the console, because it found the word "hat" in the string "The cat in the hat" that ends with letter 'at'
+
+###### More Regex
+
 Regular expressions, or "regex" for short, are a way to match patterns in strings. They are often used in JavaScript for tasks such as validating email addresses, phone numbers, and credit card numbers.
 
 Here are some common regex symbols and their meanings:
