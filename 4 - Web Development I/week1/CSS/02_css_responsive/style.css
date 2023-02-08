@@ -1,0 +1,69 @@
+
+
+/* @media screen and (max-width: 400px) {
+    #t1{
+        font-size: 20px;
+        background-color: rgb(109, 124, 119);
+        color: white;
+    }
+    
+    #p1{
+        font-size: 15px;
+        background-color: rgb(169, 99, 13);
+        color: white;
+    } 
+}
+
+@media screen and (min-width: 500px) {
+    #t1{
+        font-size: 30px;
+        background-color: rgb(31, 201, 96);
+        color: black;
+    }
+    
+    #p1{
+        font-size: 15px;
+        background-color: rgb(44, 16, 185);
+        color: white;
+    } 
+} */
+
+#t1{
+    font-size: 2rem;
+    background-color: rgb(255, 41, 41);
+}
+
+#p1{
+    font-size: 1.5rem;
+    background-color: rgb(255, 41, 41);
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+    /* mobile */
+    #t1{
+        font-size: 1rem;
+        background-color: rgb(68, 127, 254);
+        color: black;
+    }
+    
+    #p1{
+        font-size: 0.8rem;
+        background-color: rgb(68, 127, 254);
+        color: white;
+    } 
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+    /* tablet */
+    #t1{
+        font-size: 1.5rem;
+        background-color: rgb(138, 82, 14);
+        color: black;
+    }
+    
+    #p1{
+        font-size: 1rem;
+        background-color:rgb(129, 76, 10);
+        color: white;
+    } 
+}

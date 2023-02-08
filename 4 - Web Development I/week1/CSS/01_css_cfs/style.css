@@ -1,0 +1,61 @@
+html{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    /* display: inline; */
+    color: red;
+    font-size: 50px;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* color name */
+
+    /* border */
+    border: 5px solid #DC9596;
+    /* border-bottom: 1px solid black; */
+
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    /* border-radius: 10px; this is for every corner */
+
+    /* padding */
+    padding: 24px;
+    /* padding: 20px; is all */
+    /* padding: 20px 10px; top-bottom & left-right */
+    /* padding: 20px 10px 10px 5px; top-right-bottom-left */
+
+    /* margin */
+    /* margin: 100px; is all sides */
+    /* margin: 5% auto; top-bottom & left-right */
+    margin: 10px 20px 10px 20px;
+    /* margin: 10px 20px; */
+    
+}
+
+h2{
+    color: rgb(22, 27, 157);
+    font-size: 40px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* rgb color */
+}
+
+h3{
+    color: #DC9596;
+    font-size: 30px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* hex color */
+}
+
+h4{
+    color: rgba(14, 73, 223, 0.818);
+    font-size: 20px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* rgba: red, green and blue with alpha option which changing kinda opacity */
+}
+
+h5{
+    color: hsl(245, 37%, 59%);
+    font-size: 10px;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* hsl: hue, saturation, lightness values */
+}
