@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        /* to reset all built-in css properties for all elements */
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box; 
+        }
+
+        .container{
+            border: 1px solid black;
+            width: 320px;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .container > button {
+            border: none;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .container > button:hover{
+            background-color: rgba(28, 28, 28, 0.7);
+        }
+
+        .container > button:active{
+            border: 1px solid yellow;
+        }
+
+        .container > input {
+            outline: none;
+        }
+
+        .container > input:focus {
+            border: 2px solid red;
+        }
+
+        .container > input:hover {
+            border: 2px solid blue;
+        }
+
+        ul > li:first-child{
+            border: 1px solid black;
+        }
+
+        ul > li:last-child{
+            border: 1px solid black;
+        }
+
+        a:first-child{
+            /*border: 1px solid black;*/
+        }
+
+        ol > li:nth-child(2n + 1){
+            /* n could choose all elements/siblings */
+            /* 2n will choose even numbers */
+            /* 2n + 1 will choose odd numbers */
+            border: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#home">About</a>
+            </li>
+            <li>
+                <a href="#home">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <img src="" alt="card-item-1">
+            <h2>Card Item 1</h2>
+            <h2>Card Item 1</h2>
+            <p>This is the card item description</p>
+            <input type="text" placeholder="Hello world">
+            <button>Click me to add</button>
+        </div>
+
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <a href="">test</a>
+        </ol>
+    </main>
+</body>
+</html>

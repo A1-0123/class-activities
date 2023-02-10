@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        /*
+        li{
+            color: red;
+        }
+        */
+        /* USING > symbol */
+        /* Selects all li elements that are a direct child of an ul element */
+        ul > li {
+            color: red;
+        }
+
+        ol > li {
+            color: blue;
+        }
+
+        /* USING + symbol*/
+        /* Selects all h1 elements that are a sibling of an li element */
+        li + h1 {
+            color: orange;
+        }
+
+        /* USING ~ symbol */
+        /* Selects all h3 elements that are a sibling of an p element */
+        p ~ h3 {
+            color: green;
+        }
+
+        input[type="submit"]{
+            border: none;
+            background-color: orange;
+            padding: 10px 14px;
+            border-radius: 4px;
+            color: white;
+        }
+
+        a[target="_blank"]{
+            text-decoration: none;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+    <main>
+        <h1>Hello World!</h1>
+        <ol>
+            <li>FRONTEND</li>
+            <h1>Type of Development</h1>
+            <li>BACKEND</li>
+            <li>FULLSTACK</li>
+            <h1>Type of Design</h1>
+        </ol>
+
+        <div>
+            <p>this is paragraph 1</p>
+            <h3>this is h3 title 1</h3>
+            <p>this is paragraph 2</p>
+            <h3>this is h3 title 2</h3>
+
+            <input type="text">
+            <input type="submit" value="Click me!">
+
+            <br>
+            <a href="">This is target self</a>
+            <br>
+            <a target="_blank" href="">This is target blank</a>
+        </div>
+    </main>
+
+</body>
+</html>
