@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #121212;
+    height: 100vh;
+    /* 100vh: 100 viewport height */
+    display: flex;
+    /* flex is 2 dimension layout system */
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 48px;
+    width: 160px;
+
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+    color: darkorange;
+
+    /* letter-spacing: 1.5px; this is giving gap to each letter*/ 
+    /* word-spacing: 2px; this is giving spacing to words*/
+    /* line-height: 10px; this is height for line */
+
+    background-color: #121212;
+    border: 1px solid darkorange;
+    border-radius: 8px;
+
+    transition: transform 0.8s ease, box-shadow 0.8s ease, border-radius 1s ease;
+    /* transition: border-radius 1s ease; */
+}
+
+button:hover{
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -8px darkorange;
+    transform: translateY(-0.20em);
+}

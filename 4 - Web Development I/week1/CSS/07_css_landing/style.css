@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    list-style: none;
+    width: auto;
+}
+
+a{
+    text-decoration: none;
+    margin: 0 20px;
+    color: #121212;
+}
+
+nav > ul {
+    padding: 20px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > ul > div {
+    display: flex;
+}
+
+.nav-login{
+    /* align-items: center; */
+}
+
+.nav-link li a{
+    color: #9D9D9D;
+}
+
+#signup-btn{
+    background-color: #006EFE;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: #FFFf;
+}
+
+main{
+    padding: 0 64px;
+}
+
+#landing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 72px;
+}
+.landing-content{
+    width: 440px;
+}
+
+.landing-content h1{
+    font-size: 64px;
+    margin-bottom: 26px;
+    font-weight: 600;
+}
+
+.landing-content p{
+    font-size: 24px;
+    margin-bottom: 26px;
+}
+
+.landing-content button{
+    height: 38px;
+    padding: 0 48px;
+    border: none;
+    background-color: #006EFE;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.landing-image img{
+    width: 600px;
+    height: 400px;
+}
