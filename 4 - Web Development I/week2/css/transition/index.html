@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            transition: background 2s, color 5s;
+            /* transition: <css-property-name> duration */
+            display: block;
+            height: 100px;
+            width: 100%;
+            color: black !important;
+        }
+        h1:hover{
+            background: black;
+            color: white;
+
+            /* transform:translateX(2em);*/
+        }
+
+        .container h1{
+            color: red;
+        }
+
+        #heading1{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading1" style="color: orange">Hello</h1>
+        <button>Click me</button>
+    </div>
+</body>
+</html>
