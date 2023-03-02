@@ -1,0 +1,17 @@
+.custom-btn {
+  color: white;
+  background: blue;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+body {
+  background-color: #dedede;
+}
+/*# sourceMappingURL=main.css.map */

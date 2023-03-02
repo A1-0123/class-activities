@@ -1,0 +1,54 @@
+.error {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: red;
+}
+
+.container {
+  border: 1px solid blue;
+}
+.container .card--title h3 {
+  margin: 12px;
+  padding: 12px;
+  color: red;
+}
+.container .card--title h3 span {
+  border: 1px solid black;
+  color: blue;
+}
+.container .card--info {
+  border: 1px solid black;
+}
+.container .card--cta .btn {
+  border: none;
+  padding: 10px 12px;
+  color: #ededed;
+  background-color: black;
+  border-radius: 6px;
+}
+@media (max-width: 600px) {
+  .container .card {
+    background-color: cadetblue;
+  }
+}
+
+.nav--red {
+  color: red;
+}
+.nav--blue {
+  color: blue;
+}
+.nav--green {
+  color: green;
+}
+
+.custom-btn {
+  border: none;
+  padding: 10px 12px;
+  color: #ededed;
+  background-color: black;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+/*# sourceMappingURL=00_sass.css.map */

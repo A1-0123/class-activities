@@ -1,0 +1,14 @@
+@mixin largeButton{
+    color: $button_color;
+    background: $button_bg;
+
+    padding: 10px 20px;
+    border: none;
+
+    border-radius: $border-radius;
+};
+
+@mixin listCard{
+    border: 1px solid $secondary_color;
+    padding: 20px;
+};

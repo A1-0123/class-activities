@@ -1,0 +1,12 @@
+@mixin custom-btn{
+    border: none;
+    padding: 10px 12px;
+    color: $primary_color;
+    background-color: $secodary_color;
+    border-radius: $border-radius;
+}
+
+@mixin custom-spacing($space){
+    margin: $space;
+    padding: $space;
+}

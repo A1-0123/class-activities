@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixin";
+
+%error-message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: red;
+}
+
+.container{
+    border: 1px solid $button_color;
+    .card{
+        &--title{
+            h3{
+                @include custom-spacing(12px);
+                // margin: 30px;
+                // padding: 30px;
+                color: $title_color;
+                span{
+                    border: 1px solid $secodary_color;
+                    color: $button_color;
+                }
+            }
+        }
+        &--info{
+            border: 1px solid $secodary_color;
+        }
+        &--cta{
+            .btn{
+                @include custom-btn
+            }
+        }
+        @media (max-width: 600px) {
+           background-color: cadetblue;
+        }
+    }
+}
+
+.nav{
+    @each $color in $nav_colors { //red, blue, green
+        &--#{$color}{
+            color: $color;
+        }
+    }
+}
+
+.error{
+    @extend %error-message;
+}
+.custom-btn{
+    @include custom-btn;
+    @include custom-spacing(10px);
+}
