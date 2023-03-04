@@ -1,0 +1,80 @@
+$bg_color: #3c3c3c;
+$text_color: #1e1e1e;
+$card_color: #eee;
+$border_color: #c7c7c7;
+$border_radius: 6px;
+$padding: 16px;
+
+@mixin custom-input{
+    margin-bottom: 12px;
+    height: 32px;
+    outline: none;
+    padding: 0 12px;
+    border: 1px solid $border_color;
+    border-radius: $border_radius;
+}
+
+@mixin custom-btn{
+    margin-top: 12px;
+    background-color: $text_color;
+    color: $card_color;
+    height: 36px;
+    padding: 6px 12px;
+    border: 1px solid $border_color;
+    border-radius: $border_radius;
+
+    cursor: pointer;
+}
+
+body{
+    background-color: $bg_color;
+    main{
+        padding: $padding;
+        .form{
+            background-color: $card_color;
+            border-radius: $border_radius;
+            padding: $padding;
+            width: 450px;
+
+            margin: 0 auto;
+            &--header{
+                h1, p{
+                    color: $text_color;
+                }
+            }
+
+            &--form-group{
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    margin-bottom: 6px;
+                }
+                input{
+                    @include custom-input();
+                }
+                
+                input[type="submit"]{
+                    @include custom-btn();
+
+                    &:hover{
+                        background-color: $text_color;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &--aggrement{
+                padding: ($padding / 4) 0;
+            }
+
+            &--savecard{
+                padding: ($padding / 4) 0;
+            }
+
+            label{
+                color: $text_color;
+            }
+        }
+    }
+}
