@@ -5,6 +5,7 @@ const todoError = document.querySelector("#todo-error");
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 let count = 0;
 
+
 todoButton.addEventListener("click", function (event){
     event.preventDefault(); // stop to refresh the page
     let text = todoInput.value;
@@ -28,27 +29,30 @@ todoButton.addEventListener("click", function (event){
 
 function renderTodos(todo) {
     let li = document.createElement("li");
-    const buttonDelete = document.createElement("button");
-    // const buttonComplete = document.createElement("button");
+    let buttonDelete = document.createElement("button");
+    let buttonComplete = document.createElement("button");
     buttonDelete.textContent = "Delete";
-    // buttonComplete.textContent = "Complete";
+    buttonComplete.textContent = "Complete";
 
-    // li.textContent = todo.content;
+    li.textContent = todo.content;
     li.innerHTML = `<span>${todo.content}</span>`
     li.classList.add("list-item");
+
+    // write your logic here
+    // if the todo is done, then add style to the li
 
     buttonDelete.addEventListener("click", () => {
         deleteTodo(li, todo.id);
     })
 
-    // buttonComplete.addEventListener("click", () => {
-    //     completeTodo(li, todo.id);
-    // })
+    buttonComplete.addEventListener("click", () => {
+        completeTodo(li, todo.id);
+    })
 
     li.appendChild(buttonDelete);
-    // li.appendChild(buttonComplete);
-    
-    // li.textContent = todo.content;
+    li.appendChild(buttonComplete);
+
+
     todoList.appendChild(li);
     todoInput.value = "";
 }
@@ -58,6 +62,7 @@ if(savedTodos){
     todos = savedTodos;
     for(let i = 0; i < todos.length; i++){
         renderTodos(todos[i])
+        // will render all the todos
     }
 }
 
@@ -69,10 +74,8 @@ function deleteTodo(todo, id){
 }
 
 function completeTodo(todo, id){
-    for(let i = 0; i < todos.length; i++){
-        if(todos[i].id === id){
-            todos[i].done = true;
-        }
-    }
-    console.log(todos);
+    // write your logic here
+    // 1. find the todo
+    // 2. change the done property to true
+    // 3. save the todos to local storage
 }
