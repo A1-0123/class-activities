@@ -110,5 +110,4 @@ function endQuiz(){
 }
 
 submitButton.addEventListener("click", checkAnswer);
-
 renderQuestion();
