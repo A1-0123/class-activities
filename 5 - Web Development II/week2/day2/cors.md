@@ -1,0 +1,9 @@
+`CORS` stands for `Cross-Origin Resource Sharing`, which is a security mechanism that allows web pages from one domain to access resources from another domain. CORS is implemented as a set of HTTP headers that allow browsers to make cross-origin requests in a safe way.
+
+By default, web browsers enforce a policy called the same-origin policy, which prevents web pages from making requests to resources on another domain. This is a security measure designed to prevent malicious websites from stealing data or performing unauthorized actions on behalf of the user. However, there are legitimate cases where a web page needs to access resources from a different domain, such as when making an AJAX request to an API.
+
+To enable cross-origin requests, the server hosting the resource must include the appropriate CORS headers in the response. These headers indicate which origins are allowed to access the resource, which HTTP methods are allowed, and other security-related information. If the browser determines that the request is allowed based on the CORS headers, it will allow the request to proceed.
+
+CORS headers can be set on the server-side in the HTTP response, or by using server-side frameworks such as Express.js or Spring. Additionally, some browsers allow extensions or add-ons to modify the CORS headers for specific requests.
+
+It is important to note that enabling CORS can introduce security risks if not configured correctly. In particular, it is important to limit the domains that are allowed to make cross-origin requests, and to avoid exposing sensitive data through cross-origin requests.
