@@ -1,6 +1,6 @@
 // https://newsapi.org/docs/endpoints/everything API documentation for this example
 
-const APIKEY = "9ff9625e03ed440d861aff93a467e5fe";
+const APIKEY = "PLEASE REPLACE HERE WITH YOUR API KEY";
 
 const container = document.querySelector(".news");
 const englishButton = document.querySelector("#english-btn");
