@@ -9,9 +9,13 @@
 }
 
 .news{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    gap: 24px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 24px;
+
 }
 
 .card{
@@ -20,7 +24,16 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
+    height: auto;
+}
+
+.card img{
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    object-position: center;
 }
 
 #goto-btn{
@@ -67,4 +80,30 @@
 
 .options button:hover{
     background-color:  rgb(67, 67, 67);
+}
+
+.form{
+    position: relative;
+    margin: 12px 0;
+}
+
+#search-input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    padding: 0 12px;
+}
+
+#search-btn{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    height: 24px;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
 }

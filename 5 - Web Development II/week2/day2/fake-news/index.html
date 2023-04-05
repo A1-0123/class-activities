@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake News</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="container">
@@ -19,8 +20,13 @@
                 <option value="100">100 news</option>
             </select>
         </div>
+        <div class="form">
+            <input type="text" name="search" id="search-input" placeholder="please enter your query here.">
+            <button id="search-btn">Search</button>
+        </div>
         <div class="news"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js" integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./app.js"></script>
 </body>
 </html>

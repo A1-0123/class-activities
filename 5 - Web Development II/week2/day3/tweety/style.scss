@@ -1,0 +1,112 @@
+$primary_color: rgb(0, 191, 255);
+$hover_primary_color: rgb(0, 191, 200);
+$secondary_color: #cecece;
+$title_color: white;
+$text_color: #6d6d6d;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    header{
+        background-color: $primary_color;
+        padding: 20px;
+        text-align: center;
+        h1{
+            color: $title_color
+        }
+    }
+    main{
+        // height: calc(100vh - 200px);
+        form{
+            margin: 20px;
+            
+            #tweet-area{
+                position: relative;
+                textarea{
+                    height: 150px;
+                    width: 100%;
+                    resize: none;
+                    outline: none;
+                    border-color: $secondary_color;
+                    border-radius: 4px;
+                    padding: 12px;
+                    font-size: 18px;
+                }
+                #counter{
+                    color: $secondary_color;
+                    position: absolute;
+                    bottom: 12px;
+                    right: 12px;
+                }
+            }
+            
+
+            button[type='submit']{
+                background-color: $primary_color;
+                color: $title_color;
+                padding: 6px 12px;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                &:hover{
+                    background-color: $hover_primary_color;
+                    cursor: pointer;
+                }
+            }
+        }
+        #tweet-container{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            
+            .tweet{
+                width: 100%;
+                padding: 20px;
+                border: 1px solid $secondary_color;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                gap: 12px;
+                overflow: hidden;
+                &--header{
+                    .avatar{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        border: 1px solid $secondary_color;
+                    }
+                }
+                &--body{
+                    width: 100%;
+                    p{
+                        width: 100%;
+                        height: auto;
+                        word-wrap: break-word;
+                        text-overflow: string;
+                    }
+                    .username{
+                        margin-bottom: 12px;
+                        color: $text_color;
+                    }
+                    .date{
+                        margin-top: 12px;
+                        color: $text_color;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background-color: $secondary_color;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
