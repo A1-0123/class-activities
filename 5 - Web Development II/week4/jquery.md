@@ -7,7 +7,6 @@ Include jQuery in your HTML file:
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 ```
-
 ##### `DOM Manipulation - Selectors`:
 
 One of the main reasons developers choose to use jQuery is for its powerful and intuitive DOM manipulation capabilities. With jQuery, you can select elements on the page, traverse and modify their content, and add or remove elements from the DOM. For example, to select all the p elements on the page, you can use the following code:
@@ -250,7 +249,7 @@ $("#btn-reset").click(function(){
 
 ##### `Animations`:
 
-With jQuery, you can easily create animations and effects that can make your pages more dynamic and engaging. For example, to slide up an element when it's clicked, you can use the following code:
+With jQuery, you can easily create animations and effects that can make your pages more dynamic and engaging. For example, to slide up an element when it's clicked.
 
 `$(selector).hide(duration, easing, callback)`: Hides the selected element with a specified duration and easing function.
 
@@ -356,7 +355,7 @@ In addition to the `$.get` and `$.post` methods, there are several other shortha
 
 [JQuery AJAX](https://api.jquery.com/jQuery.ajax/)
 
-#### JQuery UI
+### JQuery UI
 
 jQuery UI is a collection of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript library. It provides a set of tools for creating highly interactive and dynamic user interfaces using jQuery.
 
@@ -374,7 +373,7 @@ Using jQuery UI, you can add rich, interactive functionality to your web pages w
 
 [JQuery UI](https://jqueryui.com/)
 
-#### jQuery Selectors
+### jQuery Selectors
 
 jQuery selectors are used to select elements on the page. Here are some of the most commonly used jQuery selectors:
 
@@ -418,7 +417,7 @@ jQuery selectors are used to select elements on the page. Here are some of the m
 
 | --- | --- |
 
-#### jQuery Events
+### jQuery Events
 
 jQuery events are used to bind event handlers to elements on the page. Here are some of the most commonly used jQuery events:
 
@@ -443,7 +442,7 @@ jQuery events are used to bind event handlers to elements on the page. Here are 
 
 | --- | --- |
 
-#### jQuery Effects
+### jQuery Effects
 
 jQuery effects are used to animate elements on the page. Here are some of the most commonly used jQuery effects:
 
@@ -464,7 +463,7 @@ jQuery effects are used to animate elements on the page. Here are some of the mo
 
 | --- | --- |
 
-#### jQuery Cheat Sheet
+### jQuery Cheat Sheet
 
 Here's a cheat sheet of some of the most commonly used jQuery methods:
 

@@ -78,7 +78,9 @@ $(window).on("resize", (ev) => {
     console.log(ev.currentTarget.outerWidth);
 })
 
-$(".box").click(() => {
-    $(".box").first().hide(6000, "linear");
+$(".container").hover(() => {
+    $(".box").show();
+}, () => {
+    $(".box").hide();
 })
 

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container{
+    width: 100%;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    height: 32px;
+    padding: 0 12px;
+    outline: none;
+}
+
+button {
+    position: absolute;
+    right: 3px;
+    height: 26px;
+    top: 3px;
+    padding: 0 6px;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+    border: 1px solid #cecece;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 24px 0;
+}
+
+li{
+    font-size: 18px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #cecece;
+}

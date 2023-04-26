@@ -1,0 +1,35 @@
+html{
+    background-color: dimgrey;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 1rem 2rem;
+}
+
+#btn-qoute{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    /* border: 1px solid black; */
+}
+#btn-qoute:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#qoute{
+    color: white;
+}
