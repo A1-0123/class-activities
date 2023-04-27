@@ -1,33 +1,16 @@
 let index = 0;
 let score = 0;
 let submitted = false;
-let questions = [
-    {
-        "question": "What is the capital of France ?",
-        "choices": ["London", "Paris", "Berlin"],
-        "answer": 1
-    },
-    {
-        "question": "What is the highest mountain in the world ?",
-        "choices": ["Everest", "K2", "Makalu"],
-        "answer": 0
-    },
-    {
-        "question": "Who invented the telephone ?",
-        "choices": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla"],
-        "answer": 0
-    }
-];
+let questions = [];
 
-// $.getJSON("./data/data.json", (data) => {
-//     console.log(data);
-//     questions = data;
-//     console.log(questions);
-// })
+$.getJSON("./data/data.json", (data) => {
+    questions = data;
+    if(questions.length !== 0) showQuestion();
+})
 
-// console.log(questions); 
-// why we are not able to get questions here ?
-// how to fix this issue ?
+console.log(questions); // []
+
+// log(questions)
 
 function showQuestion() {
     $("#question").text(questions[index].question);
@@ -78,5 +61,3 @@ $("#btn-submit").click(() => {
 })
 
 $("#btn-next").click(() => nextQuestion())
-
-showQuestion();
