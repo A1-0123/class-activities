@@ -1,0 +1,20 @@
+/* .circle{
+  border:1px solid black;
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+}
+
+.square{
+  border:1px solid black;
+  width: 100px;
+  height:100px;
+} */
+
+.box{
+    width: 20px;
+    height: 20px;
+    border:1px solid black;
+    background: blue;
+    margin: 10px;
+  }
