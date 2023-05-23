@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Coffee Shop</title>
+</head>
+<body>
+    <h1>Coffee Shop</h1>
+
+    <div id="products">
+        <div class="product">
+            <h3>Espresso</h3>
+            <p>Do et et aliqua commodo ipsum occaecat nulla nostrud anim enim. Id exercitation reprehenderit nulla nostrud non duis in officia eiusmod sint labore non quis. Dolore velit et proident dolor dolor est tempor officia pariatur ex. Laborum sint ullamco sunt amet veniam exercitation. Consequat proident ipsum nostrud reprehenderit pariatur commodo qui qui fugiat officia incididunt aute.</p>
+            <p>Price: $4</p>
+            <button class="button" onclick="addToCart('Espresso', 4)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Americano</h3>
+            <p>Do et et aliqua commodo ipsum occaecat nulla nostrud anim enim. Id exercitation reprehenderit nulla nostrud non duis in officia eiusmod sint labore non quis. Dolore velit et proident dolor dolor est tempor officia pariatur ex. Laborum sint ullamco sunt amet veniam exercitation. Consequat proident ipsum nostrud reprehenderit pariatur commodo qui qui fugiat officia incididunt aute.</p>
+            <p>Price: $5</p>
+            <button class="button" onclick="addToCart('Americano', 5)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Latte</h3>
+            <p>Do et et aliqua commodo ipsum occaecat nulla nostrud anim enim. Id exercitation reprehenderit nulla nostrud non duis in officia eiusmod sint labore non quis. Dolore velit et proident dolor dolor est tempor officia pariatur ex. Laborum sint ullamco sunt amet veniam exercitation. Consequat proident ipsum nostrud reprehenderit pariatur commodo qui qui fugiat officia incididunt aute.</p>
+            <p>Price: $6</p>
+            <button class="button" onclick="addToCart('Latte', 6)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button class="button" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
