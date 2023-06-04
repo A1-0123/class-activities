@@ -41,3 +41,10 @@ const shoppingCart = {
     // render the total and a button `order now` in a `<section>` element
   },
 };
+
+// Step 5 – Shop
+const shop = {
+  render(){
+    // render the shop by calling the render method of ProductList and ShoppingCart classes
+  }
+}
