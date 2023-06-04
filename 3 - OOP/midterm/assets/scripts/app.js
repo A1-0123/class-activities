@@ -57,3 +57,5 @@ const app = {
     // add the product to the cart by calling the addToCart method of Cart class
   },
 };
+
+// Step 7 – Update total amount
