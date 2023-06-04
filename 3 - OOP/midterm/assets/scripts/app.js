@@ -1,126 +1,145 @@
-// Step 1 - Product class
+// product.js
 class Product {
-  id;
-  title;
-  price;
-  description;
-  image;
-
-  // Removed constructor
+  constructor(id, title, price, description, image) {
+    this.id = id;
+    this.title = title;
+    this.price = price;
+    this.description = description;
+    this.image = image;
+  }
 }
 
-// Step 2 - Product Item
+// productItem.js
 class ProductItem {
-  product;
+  constructor(product) {
+    this.product = product;
+  }
 
   addToCart() {
-    shoppingCart.addItem(this.product);
+    App.addProductToCart(this.product);
   }
 
   render() {
     const li = document.createElement("li");
+    li.classList.add('product-item');
     li.innerHTML = `
-      <div class="product-item">
-        <img src="${this.product.image}" alt="${this.product.title}" />
-        <div class="product-item__content">
-        <h3>${this.product.title}</h3>
-        <p>${this.product.description}</p>
-        <span class="price">$${this.product.price}</span>
-        <button class="add-to-cart" onclick="() => this.addToCart()">Add to Cart</button>
-        </div>
-      </div>
+          <div>
+            <img src="${this.product.image}" alt="A Pillow"/>
+            <div class="product-item__content">
+              <h2>${this.product.title}</h2>
+              <h3>${this.product.price}</h3>
+              <p>${this.product.description}</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
     `;
+
+    const addButton = li.querySelector("button");
+    addButton.addEventListener('click', () => this.addToCart());
+
     return li;
   }
 }
 
-// Step 3 - Product List
+// productList.js
 class ProductList {
-  products = [];
+  constructor() {
+    this.products = [];
+  }
 
   async fetchProducts() {
     try {
-      const response = await fetch("https://fakestoreapi.com/products");
+      const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       this.products = data;
     } catch (error) {
-      console.error("Error fetching products:", error);
+      console.error('Error fetching products:', error);
     }
   }
 
   render() {
-    const ul = document.createElement("ul");
-    ul.classList.add('product-list')
-    ul.id = "prod-list";
-    for (const product of this.products) {
-      const productItem = new ProductItem();
-      productItem.product = product;
-      ul.append(productItem.render());
-    }
-    return ul;
+    const productListElement = document.getElementById('product-list');
+    productListElement.innerHTML = ''; // Clear previous product list
+
+    this.products.forEach((product) => {
+      const productItem = new ProductItem(product);
+      const li = productItem.render();
+      productListElement.appendChild(li);
+    });
   }
 }
 
-// Step 4 – ShoppingCart
+// shoppingCart.js
 class ShoppingCart {
-  items = [];
-
-  addItem(product) {
-    this.items.push(product);
-    this.render();
+  constructor() {
+    this.items = [];
   }
 
   getTotal() {
     let total = 0;
-    for (const item of this.items) {
+    this.items.forEach((item) => {
       total += item.price;
-    }
+    });
     return total;
   }
 
   render() {
-    const section = document.createElement("section");
-    section.classList.add('cart');
-    section.innerHTML = `
-      <h2>Shopping Cart</h2>
-      <p>Total: $${this.getTotal()}</p>
-      <button class="order-now">Order Now</button>
-    `;
-    return section;
+    const cartElement = document.getElementById('cart');
+    cartElement.innerHTML = ''; // Clear previous cart content
+
+    const total = this.getTotal();
+    const totalElement = document.createElement('p');
+    totalElement.textContent = `Total: $${total.toFixed(2)}`;
+
+    const productListElement = document.createElement('ul');
+    productListElement.classList.add('cart-product-list');
+
+    this.items.forEach((item) => {
+      const productItemElement = document.createElement('li');
+      productItemElement.textContent == item.title;
+      productListElement.appendChild(productItemElement);
+    })
+
+    const orderButton = document.createElement('button');
+    orderButton.textContent = 'Order Now';
+
+    cartElement.appendChild(totalElement);
+    cartElement.appendChild(orderButton);
   }
 }
 
-// Step 5 – Shop
+// shop.js
 class Shop {
-  productList = new ProductList();
-  shoppingCart = new ShoppingCart();
+  constructor() {
+    this.productList = new ProductList();
+    this.shoppingCart = new ShoppingCart();
+  }
 
-  async render() {
-    await this.productList.fetchProducts(); // Fetch products from the API
-    const main = document.getElementById("app");
-    main.innerHTML = "";
-    main.appendChild(this.productList.render());
-    main.appendChild(this.shoppingCart.render());
+  async fetchProducts() {
+    await this.productList.fetchProducts();
+    this.render();
+  }
+
+  render() {
+    this.productList.render();
+    this.shoppingCart.render();
   }
 }
 
-// Step 6 – Adding products to the cart
-const app = {
-  async init() {
-    const shop = new Shop();
-    await shop.render();
-    this.shop = shop;
-  },
+// app.js
+class App {
 
-  addProductToCart(productId) {
-    const product = this.shop.productList.products.find((product) => product.id === productId);
-    if (product) {
-      this.shop.shoppingCart.addItem(product);
-    }
-  },
-};
+  static shop;
 
-// Step 7 – Update total amount
+  static async init() {
+    this.shop = new Shop();
+    await this.shop.fetchProducts();
+  }
 
-// Call the `app.init()` to initialize the application
-app.init();
+  static addProductToCart(product) {
+    this.shop.shoppingCart.items.push(product);
+    this.shop.shoppingCart.render();
+  }
+}
+
+App.init();
