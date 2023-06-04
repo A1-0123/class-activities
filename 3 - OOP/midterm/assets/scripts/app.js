@@ -1,11 +1,13 @@
 // Classes
 // Step 1 - Product class
-const product = {
-  id: 1,
-  title: "...",
-  price: 0,
-  description: "...",
-  image: "...",
+class Product{
+  constructor(id, title, price, description, image){
+    id: 1;
+    title: "...";
+    price: 0;
+    description: "...";
+    image: "...";
+  }
 };
 
 // Step 2 - Product Item
