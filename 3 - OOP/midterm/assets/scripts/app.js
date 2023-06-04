@@ -2,11 +2,11 @@
 // Step 1 - Product class
 class Product{
   constructor(id, title, price, description, image){
-    id: 1;
-    title: "...";
-    price: 0;
-    description: "...";
-    image: "...";
+    this.id = id;
+    this.title = title;
+    this.price = price;
+    this.description = description;
+    this.image = image;
   }
 };
 
