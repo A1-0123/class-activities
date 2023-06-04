@@ -26,7 +26,7 @@ class ProductItem {
         <h3>${this.product.title}</h3>
         <p>${this.product.description}</p>
         <span class="price">$${this.product.price}</span>
-        <button class="add-to-cart" onclick="app.addProductToCart(${this.product.id})">Add to Cart</button>
+        <button class="add-to-cart" onclick="() => this.addToCart()">Add to Cart</button>
         </div>
       </div>
     `;
@@ -109,12 +109,13 @@ const app = {
   async init() {
     const shop = new Shop();
     await shop.render();
+    this.shop = shop;
   },
 
   addProductToCart(productId) {
-    const product = shop.productList.products.find((product) => product.id === productId);
+    const product = this.shop.productList.products.find((product) => product.id === productId);
     if (product) {
-      shop.shoppingCart.addItem(product);
+      this.shop.shoppingCart.addItem(product);
     }
   },
 };
