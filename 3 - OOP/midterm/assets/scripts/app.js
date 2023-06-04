@@ -1,5 +1,4 @@
 // Classes
-
 // Step 1 - Product class
 const product = {
   id: 1,
@@ -48,3 +47,13 @@ const shop = {
     // render the shop by calling the render method of ProductList and ShoppingCart classes
   }
 }
+
+// Step 6 – Adding products to the cart
+const app = {
+  init() {
+    // initialize the app by creating instance of Shop class and calling the render method of the Shop class
+  },
+  addProductToCart() {
+    // add the product to the cart by calling the addToCart method of Cart class
+  },
+};
