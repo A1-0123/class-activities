@@ -30,3 +30,14 @@ const productList = {
     // render the products by looping through the products array and create a new ProductItem instance for each product. Use render method of ProductItem class to get each product element and append it to the `<ul>`.
   },
 };
+
+// Step 4 – ShoppingCart 
+const shoppingCart = {
+  items: [],
+  getTotal() {
+    // calculate the total price of the items in the cart
+  },
+  render() {
+    // render the total and a button `order now` in a `<section>` element
+  },
+};
