@@ -65,15 +65,28 @@ button:active {
 
 .product-list {
   list-style: none;
-  margin: 0 2rem;
-  padding: 0;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 100%;
 }
 
+li{
+  display: inline-block;
+  width: fit-content;
+  max-width: 45%;
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+}
 .product-item {
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  width: 50rem;
-  max-width: 90%;
+  width: 100%;
 }
 
 .product-item img {

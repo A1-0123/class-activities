@@ -1,62 +1,125 @@
-// Classes
 // Step 1 - Product class
-const product = {
-    id: 1,
-    title: "...",
-    price: 0,
-    description: "...",
-    image: "..."
-};
+class Product {
+  id;
+  title;
+  price;
+  description;
+  image;
+
+  // Removed constructor
+}
 
 // Step 2 - Product Item
-const productItem = {
-  product: {}, // instance of Product class
+class ProductItem {
+  product;
+
   addToCart() {
-    // just console.log the product for now
-    console.log(this.product.id);
-  },
+    shoppingCart.addItem(this.product);
+  }
+
   render() {
-    // return the product element with the product data (<li>)
-  },
-};
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div class="product-item">
+        <img src="${this.product.image}" alt="${this.product.title}" />
+        <div class="product-item__content">
+        <h3>${this.product.title}</h3>
+        <p>${this.product.description}</p>
+        <span class="price">$${this.product.price}</span>
+        <button class="add-to-cart" onclick="app.addProductToCart(${this.product.id})">Add to Cart</button>
+        </div>
+      </div>
+    `;
+    return li;
+  }
+}
 
 // Step 3 - Product List
-const productList = {
-  products: [],
-  fetchProducts: function () {
-    // fetch the products from the API
-  },
-  render() {
-    // render the products by looping through the products array and create a new ProductItem instance for each product. Use render method of ProductItem class to get each product element and append it to the `<ul>`.
-  },
-};
+class ProductList {
+  products = [];
 
-// Step 4 – ShoppingCart 
-const shoppingCart = {
-  items: [],
-  getTotal() {
-    // calculate the total price of the items in the cart
-  },
+  async fetchProducts() {
+    try {
+      const response = await fetch("https://fakestoreapi.com/products");
+      const data = await response.json();
+      this.products = data;
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  }
+
   render() {
-    // render the total and a button `order now` in a `<section>` element
-  },
-};
+    const ul = document.createElement("ul");
+    ul.classList.add('product-list')
+    ul.id = "prod-list";
+    for (const product of this.products) {
+      const productItem = new ProductItem();
+      productItem.product = product;
+      ul.append(productItem.render());
+    }
+    return ul;
+  }
+}
+
+// Step 4 – ShoppingCart
+class ShoppingCart {
+  items = [];
+
+  addItem(product) {
+    this.items.push(product);
+    this.render();
+  }
+
+  getTotal() {
+    let total = 0;
+    for (const item of this.items) {
+      total += item.price;
+    }
+    return total;
+  }
+
+  render() {
+    const section = document.createElement("section");
+    section.classList.add('cart');
+    section.innerHTML = `
+      <h2>Shopping Cart</h2>
+      <p>Total: $${this.getTotal()}</p>
+      <button class="order-now">Order Now</button>
+    `;
+    return section;
+  }
+}
 
 // Step 5 – Shop
-const shop = {
-  render(){
-    // render the shop by calling the render method of ProductList and ShoppingCart classes
+class Shop {
+  productList = new ProductList();
+  shoppingCart = new ShoppingCart();
+
+  async render() {
+    await this.productList.fetchProducts(); // Fetch products from the API
+    const main = document.getElementById("app");
+    main.innerHTML = "";
+    main.appendChild(this.productList.render());
+    main.appendChild(this.shoppingCart.render());
   }
 }
 
 // Step 6 – Adding products to the cart
 const app = {
-  init() {
-    // initialize the app by creating instance of Shop class and calling the render method of the Shop class
+  async init() {
+    const shop = new Shop();
+    await shop.render();
   },
-  addProductToCart() {
-    // add the product to the cart by calling the addToCart method of Cart class
+
+  addProductToCart(productId) {
+    const product = shop.productList.products.find((product) => product.id === productId);
+    if (product) {
+      shop.shoppingCart.addItem(product);
+    }
   },
 };
 
 // Step 7 – Update total amount
+
+// Call the `app.init()` to initialize the application
+app.init();
