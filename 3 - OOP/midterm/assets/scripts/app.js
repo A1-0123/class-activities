@@ -19,3 +19,14 @@ const productItem = {
     // return the product element with the product data (<li>)
   },
 };
+
+// Step 3 - Product List
+const productList = {
+  products: [],
+  fetchProducts: function () {
+    // fetch the products from the API
+  },
+  render() {
+    // render the products by looping through the products array and create a new ProductItem instance for each product. Use render method of ProductItem class to get each product element and append it to the `<ul>`.
+  },
+};
