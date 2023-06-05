@@ -93,10 +93,17 @@ class ShoppingCart {
 
     const productListElement = document.createElement('ul');
     productListElement.classList.add('cart-product-list');
+    cartElement.appendChild(productListElement);
 
     this.items.forEach((item) => {
       const productItemElement = document.createElement('li');
-      productItemElement.textContent == item.title;
+      productItemElement.classList.add('cart-item');
+      productItemElement.innerHTML = `
+      <img src="${item.image}" height="100px" alt="A Pillow"/>
+      <div class="product-item__content">
+        <h2>${item.title}</h2>
+        <h3>${item.price}</h3>
+      `;
       productListElement.appendChild(productItemElement);
     })
 
