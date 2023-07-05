@@ -36,6 +36,7 @@ class Dog extends Animal {
     bark() {
         return `${this.name} is barkking!`;
     }
+    // overriding
     eat(){
         return `${super.eat()} from doggy box`
     } // super, super is Animal class, and you can call a class method using dot(.) notation.
@@ -45,6 +46,7 @@ class Bird extends Animal {
     fly(){
         return `${this.name} is flying!`;
     }
+    // overriding
     eat(){
         return `${this.name} is eating from plate!`;
     } // this is method overriding

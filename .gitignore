@@ -1,4 +1,8 @@
 aswer.*
-2 - Algorithms, Flowchart and Problem Solving/week1/exercises/answer.js
 .DS_Store
 **/**/teacher
+**/**/node_modules
+**/node_modules
+**/**/.parcel-cache
+**/dist
+*/build

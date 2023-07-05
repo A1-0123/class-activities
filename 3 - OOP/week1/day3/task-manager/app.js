@@ -9,6 +9,12 @@ class TaskManager {
         this.tasks = [
             {
                 title: "Learn REACT!"
+            },
+            {
+                title: "Learn REACT 1!"
+            },
+            {
+                title: "Learn REACT 2!"
             }
         ];
     }

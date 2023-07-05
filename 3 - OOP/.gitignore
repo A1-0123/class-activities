@@ -1,0 +1,5 @@
+aswer.*
+.DS_Store
+**/**/teacher
+**/**/node_modules
+**/node_modules

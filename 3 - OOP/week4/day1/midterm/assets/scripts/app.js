@@ -1,10 +1,26 @@
-// let product = new Product(1, "test1", 9.99, "test description", "test-image");
-// console.log(product);
-// let product = new Product(1, "test title 1", 9.99, "test desc", "test-cover")
-// let productItem1 = new ProductItem(product);
-// productItem1.addToCart();
-// console.log(productItem1.render());
+class App {
 
-// let products = new ProductList();
-// products.fetchProducts();
-// console.log(products.render());
+    static shop = new Shop();
+
+    static async init(){
+        await App.shop.init();
+        await App.shop.render();
+    }
+
+    static async addToProductCart (product) {
+        App.shop.shoppingCart.addProduct(product)
+        await App.shop.render();
+    }
+
+    static async clearCart (){
+        this.shop.shoppingCart.clear();
+        await App.shop.render();
+    }
+
+    static async removeFromProductCart(id) {
+        this.shop.shoppingCart.removeProduct(id);
+        await App.shop.render();
+    }
+}
+
+App.init();
