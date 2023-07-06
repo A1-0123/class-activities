@@ -1,0 +1,51 @@
+@import "../../style/variables.scss";
+
+#contact{
+    color: $font-color;
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    p{
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    form{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem auto;
+        padding: 0 2rem;
+        label{
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+        input{
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid $primary-color;
+            margin-bottom: 1rem;
+        }
+        textarea{
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid $primary-color;
+            margin-bottom: 1rem;
+        }
+        button{
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: $secondary-color;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $hover-color;
+            }
+        }
+    }
+}
