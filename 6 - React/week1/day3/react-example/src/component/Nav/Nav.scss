@@ -1,0 +1,24 @@
+@import '../../style/variables.scss';
+
+nav{
+    color: $font-color;
+    padding: 1rem 2rem;
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h1{
+            margin-right: auto;
+        }
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $font-color;
+                &:hover{
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}

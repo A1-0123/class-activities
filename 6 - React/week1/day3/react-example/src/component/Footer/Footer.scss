@@ -1,0 +1,9 @@
+@import "../../style/variables.scss";
+
+footer{
+    p{
+        color: $font-color;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+}
