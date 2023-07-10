@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import './Form.scss'
 
 const Form = () => {
-//   const [email, setEmail] = useState('');
+//   const [email, setEmail] = useState('abc');
 //   const [password, setPassword] = useState('');
 //   const [bio, setBio] = useState("");
 //   const [car, setCar] = useState("mercedes");
 //   const [terms, setTerms] = useState(false);
 //   const [gender, setGender] = useState("");
 
-//   const handleEmailChange = (ev) => {
-//     console.log(ev.target.value);
-//     setEmail(ev.target.value);
+//   const handleEmailChange = (event) => {
+//     console.log(event.target.value);
+//     setEmail(event.target.value);
 //   }
 
 //   const handlePasswordChange = (event) => {
@@ -35,7 +35,7 @@ const Form = () => {
 //   }
 
 const [formData, setFormData] = useState({
-    email: '',
+    email: 'iwkfurheyehdhetsd',
     password: '',
     bio: '',
     car: '',
