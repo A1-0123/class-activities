@@ -36,11 +36,25 @@ function App() {
   ];
   
   return <div>
-    {/* {
+    {
       dummyData.map((item) => {
-        return <ProjectCard {...item}/>
+        // return <ProjectCard {...item} />
+
+        // return <ProjectCard 
+        //   id={item.id} 
+        //   image={item.image} 
+        //   keywords={item.keywords} 
+        //   title={item.title} 
+        //   description={item.description} 
+        //   url={item.url}  
+        // />
+
+        // return <ProjectCard 
+        //   title1={item.title}
+        //   description={item.description}
+        // />
       })
-    } */}
+    }
 
     <Counter />
   </div>;

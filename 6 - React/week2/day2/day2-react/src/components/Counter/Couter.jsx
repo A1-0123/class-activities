@@ -3,6 +3,9 @@ import "./Counter.scss"
 // useState
 import { useState, useEffect, useRef } from "react"; //functions component hooks
 
+// useState: state management - basically we can store data in a variable and we can use it in our component
+// useEffect: lifecycle methods - basically we can use it for fetching data from API, or we can use it for checking if something is changed in our component
+// useRef: basically we can use it for focusing to an element in our component
 function Counter(){
 
     const [count, setCount] = useState(0);
