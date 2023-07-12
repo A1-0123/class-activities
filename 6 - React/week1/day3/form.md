@@ -1,5 +1,3 @@
-Absolutely! Here's how the same examples would look as functional components, using the `useState` and `useEffect` hooks for managing state and side-effects.
-
 **1. Controlled Components:**
 
 ```jsx

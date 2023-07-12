@@ -1,5 +1,3 @@
-Sure! I understand that you're looking for a comprehensive and beginner-friendly guide to React components and props, starting from the basics. Here we go:
-
 **React Components**
 
 Components are the core building blocks of a React application. Essentially, a React application is just a tree of components. Each component represents a part of the user interface.

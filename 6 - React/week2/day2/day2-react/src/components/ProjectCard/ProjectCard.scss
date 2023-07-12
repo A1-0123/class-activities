@@ -1,0 +1,53 @@
+@import "../../styles/mixins.scss";
+
+.projectCard {
+  max-width: 330px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  &-top {
+    height: 201px;
+    border: 1px solid #FFFFFF;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+
+  &-mid {
+    height: 37px;
+    padding: 8px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    span{
+        @include keywords;
+    }
+  }
+
+  &-bottom {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h2{
+        @include card-title;
+    }
+    p{
+        @include keywords;
+    }
+    &-actions {
+        display: flex;
+        gap: 16px;
+      .live-btn {
+        @include project-card-button;
+      }
+      .cached-btn {
+        @include project-card-button;
+      }
+    }
+  }
+}
+
+
