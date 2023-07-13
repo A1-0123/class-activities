@@ -7,9 +7,35 @@ const HeroContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    margin: 5rem 0;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: start;
+`;
+
+const ImageWrapper = styled.div`
+    position: relative;
+    #pattern1{
+        z-index: -1;
+        top: 100px;
+    }
+    #image{
+        z-index: 0;
+    }
+    #pattern2{
+        z-index: 1;
+        right: 25px;
+        bottom: 60px;
+    }
+`;
+
+const AbsoluteImage = styled.img`
+    position: absolute;
+`;
 
 const CustomSpan = styled.span`
     color: #C778DD;
@@ -23,11 +49,11 @@ const Hero = () => {
             <p>He crafts responsive websites where technologies meet creativity</p>
             <Button title={"Contact me!!"} borderColor="#C778DD"/>
         </Wrapper>
-        <Wrapper>
-            <img src="./images/pattern1.png" alt="" />
-            <img src="./images/heroImage.png" alt="" />
-            <img src="./images/pattern2.png" alt="" />
-        </Wrapper>
+        <ImageWrapper>
+            <AbsoluteImage id='pattern1' src="./images/pattern1.png" alt="" />
+            <img id='image' src="./images/heroImage.png" alt="" />
+            <AbsoluteImage id='pattern2' src="./images/pattern2.png" alt="" />
+        </ImageWrapper>
     </HeroContainer>
   )
 }
