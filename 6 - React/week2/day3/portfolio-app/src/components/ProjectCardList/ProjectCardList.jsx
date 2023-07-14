@@ -36,7 +36,7 @@ const ProjectCardList = () => {
   return (
     <ListWrapper>
         {
-            projectsData.map((project) => <ProjectCard {...project} />)
+            projectsData.map((project, index) => <ProjectCard key={index} {...project} />)
         }
     </ListWrapper>
   )

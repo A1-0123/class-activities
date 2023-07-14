@@ -4,7 +4,8 @@ import styled from 'styled-components'
 const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
-    margin: 4rem 0;
+    margin: 2.5rem 0;
+    font-size: 32px;
     span{
         color: #C778DD;
     }
@@ -18,9 +19,13 @@ const TitleWrapper = styled.div`
     }
 `;
 
-const Title = ({title}) => {
+const Title = ({title, isLine}) => {
   return (
-    <TitleWrapper><span>#</span>{title} <span id='line'></span></TitleWrapper>
+    <TitleWrapper><span>#</span>{title} 
+
+    {isLine && <span id='line'></span>}
+    
+    </TitleWrapper>
   )
 }
 

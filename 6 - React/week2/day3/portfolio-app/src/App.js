@@ -1,28 +1,27 @@
 import React from "react";
 import Nav from "./components/Nav/Nav";
-import Hero from "./components/Hero/Hero";
-import Quote from "./components/Quote/Quote";
-import Title from "./components/Title/Title";
-import ProjectCardList from "./components/ProjectCardList/ProjectCardList";
-import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// pages
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Works from "./pages/Works/Works";
+import Contacts from "./pages/Contacts/Contacts";
 
 function App() {
 
-  return <div>
-    <Nav />
-    <Hero />
-    <Quote text="With great power comes great electricity bill" author="Dr. Who"/>
-    <Title id="projects" title="projects" />
-    <ProjectCardList />
-    <Title id="skills" title="skills" />
-    {/* TODO: skills will be assignment */}
-    <Title id="about-me" title="about-me" />
-    {/* TODO: about-me will be assignment */}
-    <Title id="contact" title="contact" />
-    <Contacts />
-    <Footer/ >
-  </div>
+  return <Router>
+      <Nav /> 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+      <Footer />
+  </Router>
 }
 
 export default App;

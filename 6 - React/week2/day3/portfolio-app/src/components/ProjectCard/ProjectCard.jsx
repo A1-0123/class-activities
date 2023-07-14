@@ -48,12 +48,14 @@ const ProjectCardMiddle = styled.div`
     }
 `;
 
-const ProjectCard = ({ image="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YXNjcmlwdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", keywords=["HTML", "SCSS", "REACT", "NODE"], title="ChertNodes", description="Minecraft servers hosting", url }) => {
+const ProjectCard = ({ image="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YXNjcmlwdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", keywords=["HTML", "SCSS", "REACT", "NODE"], title="ChertNodes", description="Minecraft servers hosting", url, noImage }) => {
   return (
     <ProjectCardWrapper>
-        <ProjectCardTop>
+        {
+            !noImage && <ProjectCardTop>
             <img src={image} alt="" />
         </ProjectCardTop>
+        }
         <ProjectCardMiddle>
             {
                 keywords.map((keyword, index) => {

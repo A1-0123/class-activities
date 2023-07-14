@@ -5,6 +5,7 @@ import Button from "../Button/Button"
 const HeroContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    // flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
     margin: 5rem 0;
@@ -19,6 +20,7 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
     position: relative;
+    max-width: 457px;
     #pattern1{
         z-index: -1;
         top: 100px;
