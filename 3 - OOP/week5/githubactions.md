@@ -378,8 +378,6 @@ Then run `npm run build` to create an optimized build of your project in a new `
 
 That's it! You have set up a web application with Parcel, using JavaScript, HTML, and SCSS. Parcel automatically handles bundling your files, transforming SCSS to CSS, and setting up a development server.
 
-Certainly, let's dive deeper into the features of Parcel:
-
 **1. Automatic Transpilation:**
 
 Parcel automatically transpiles your code based on your `browserslist` in your `package.json` file. The `browserslist` specifies a list of browsers that you want to support. For example:

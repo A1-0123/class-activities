@@ -93,8 +93,6 @@ To use `useState`, `useRef`, and `useEffect` effectively, here are some best pra
 
 ---
 
-Certainly! Here are 20 additional examples for each of `useState`, `useRef`, and `useEffect`:
-
 **useState Examples:**
 
 1. Simple counter with increment and decrement buttons:

@@ -239,8 +239,6 @@ Some common use cases for plugins and custom configurations in Parcel include:
 
 By leveraging plugins and custom configurations, you can tailor Parcel to meet your specific project requirements and optimize your development workflow.
 
-Certainly! To create a config file for Parcel, you need to create a file named `.parcelrc` in the root of your project directory. This file should be in JSON format and can contain various configuration options to customize Parcel's behavior.
-
 Here's an example of a `.parcelrc` file with some common configuration options:
 
 ```json
@@ -272,8 +270,6 @@ You can customize the configuration options based on your project's requirements
 Once you've created your `.parcelrc` file, Parcel will automatically pick up the configuration and apply the specified options during the build process.
 
 Feel free to experiment with different configuration options and plugins to tailor Parcel's behavior to your project's needs.
-
-Certainly! Here's more information about plugins and transforms in Parcel:
 
 **Plugins:**
 Plugins extend Parcel's functionality by adding additional features and capabilities to the build process. They allow you to handle specific file types, optimize assets, apply custom transformations, and more. Here are some commonly used plugins:
@@ -458,8 +454,6 @@ Remember to replace `VERCEL_TOKEN` with the actual secret name you used in your 
 Please refer to the documentation of GitHub Secrets and Vercel for more details and best practices on managing and using secrets in your workflows and deployments.
 
 ---
-
-Certainly! Here's an example of a folder structure for a modern website built with Parcel.js and SCSS:
 
 ```
 ├── src

@@ -1,4 +1,3 @@
-Certainly! Let's simplify the explanation of decorators in TypeScript.
 
 Decorators are a feature in TypeScript that allow you to add extra functionality or modify the behavior of classes, methods, properties, or parameters at design time. They are declared using the `@decorator` syntax.
 

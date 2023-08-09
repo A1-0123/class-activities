@@ -527,8 +527,6 @@ Testing ensures the functionality and stability of your code. Write tests for ac
 
 ---
 
-Certainly! `redux-logger` is a middleware that provides a simple and clear logging mechanism for actions and states in a Redux application. It logs every action and the next state to the console, making it a handy tool for development and debugging.
-
 ### Setting up `redux-logger` in a React-Redux Application
 
 #### 1. Install `redux-logger`

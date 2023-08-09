@@ -65,8 +65,6 @@ Generics allow you to write flexible and reusable code that maintains type safet
 
 ---
 
-Certainly! Here are a few more examples of how generics can be used in TypeScript:
-
 **Example 1: Array Utilities**
 
 Let's create a simple utility function that takes an array of values and returns the first element:
